@@ -29,7 +29,6 @@ El sitio web consta de las siguientes secciones principales:
 
 * **HTML:** Estructura del contenido web.
 * **CSS:** Estilos y diseño visual del sitio.
-* **JavaScript:** Interactividad y funcionalidades dinámicas.
 
 ## Instrucciones de instalación y uso
 
