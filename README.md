@@ -2,8 +2,6 @@
 
 ¡Bienvenido a mi portafolio digital! Este sitio web ha sido diseñado para mostrar mis habilidades y **poca experiencia** en el desarrollo y diseño de páginas web.
 
-**Nota:** Quiero dejar **claro** que no toda la información proporcionada en este portafolio es real, especialmente en la sección del currículum.
-
 ## Descripción del sitio web
 
 Este portafolio es una representación de mi trabajo y capacidades como **aprendiz** desarrollador web. A través de este sitio, los visitantes pueden conocer mis habilidades técnicas, mi experiencia y los proyectos que he trabajado en este portafolio.
