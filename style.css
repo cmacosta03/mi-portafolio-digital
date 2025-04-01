@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f2f7; /* Azul cielo de fondo */
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3em; /* Letra más grande */
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    font-weight: bold; /* Textos en negrita */
+}
+
+.hero p {
+    font-size: 1.2em; /* Letra más grande */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+}
+
+.social-links {
+    display: flex;
+    justify-content: left;
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+.github {
+    background-color: #333;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.hero-image img {
+    max-width: 400px; /* Foto más grande */
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
