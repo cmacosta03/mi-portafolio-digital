@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Adivina el Número Secreto!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>¡Adivina el Número Secreto!</h1>
+        </header>
+        <main>
+            <section class="game-area">
+                <div class="input-area">
+                    <p>Introduce un número del 1 al 10:</p>
+                    <input type="number" id="numeroInput" min="1" max="10">
+                    <button id="intentarBtn">¡Inténtalo!</button>
+                    <button id="nuevoJuegoBtn">Nuevo Juego</button>
+                </div>
+                <div class="message-area">
+                    <p id="mensaje"></p>
+                    <p id="intentos"></p>
+                </div>
+            </section>
+            <aside class="image-area">
+                <img src="imagen.jpg" alt="Imagen del juego">
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
