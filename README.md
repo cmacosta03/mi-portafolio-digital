@@ -1,6 +1,7 @@
 # Portafolio Digital de Carlos Manuel Acosta Mota
 
 ¡Bienvenido a mi portafolio digital! Este sitio web ha sido diseñado para mostrar mis habilidades y **poca experiencia** en el desarrollo y diseño de páginas web.
+Nota: El Portafolio lo Pueden ver en Plataforma Vercel, aqui esta el link:
 
 ## Descripción del sitio web
 
@@ -13,15 +14,22 @@ El sitio web consta de las siguientes secciones principales:
     * Resumen de mis habilidades clave.
     * Enlaces a mis perfiles de redes sociales (LinkedIn, GitHub, etc.).
     * Información de contacto.
+    * 
 * **Sobre mí (sobre-mi.html):**
     * Descripción detallada de mi perfil profesional.
     * Enfoque y filosofía de trabajo.
     * Áreas de especialización y experiencia.
+      
 * **Currículum (curriculum.html):**
     * Currículum vitae completo.
     * Detalles de mi experiencia laboral y proyectos.
     * Información sobre mi formación académica.
     * Lista detallada de mis habilidades técnicas.
+ 
+ * Proyectos
+
+ * Número Secreto
+ * Tienda Virtual 
 
 ## Tecnologías utilizadas
 
