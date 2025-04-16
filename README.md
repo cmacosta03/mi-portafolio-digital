@@ -1,7 +1,9 @@
 # Portafolio Digital de Carlos Manuel Acosta Mota
 
 ¡Bienvenido a mi portafolio digital! Este sitio web ha sido diseñado para mostrar mis habilidades y **poca experiencia** en el desarrollo y diseño de páginas web.
-Nota: El Portafolio lo Pueden ver en Plataforma Vercel, aqui esta el link:
+
+
+Nota: El Portafolio lo Pueden ver en Plataforma Vercel, aqui esta el link: https://mi-portafolio-digital-one.vercel.app/
 
 ## Descripción del sitio web
 
@@ -40,7 +42,7 @@ El sitio web consta de las siguientes secciones principales:
 
 Para visualizar este portafolio en tu navegador:
 
-1.  Descarga o clona este repositorio: [https://github.com/cmacosta03/mi-portafolio-digital.git](https://github.com/cmacosta03/mi-portafolio-digital.git)
+1.  Descarga o clona este repositorio:(https://github.com/cmacosta03/mi-portafolio-digital.git)
 2.  Abre el archivo `index.html` en tu navegador web.
 
 El sitio está diseñado para ser responsivo, por lo que se adaptará a diferentes tamaños de pantalla.
