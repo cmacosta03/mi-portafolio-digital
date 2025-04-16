@@ -1,43 +1,83 @@
-const numeroInput = document.getElementById('numeroInput');
-const intentarBtn = document.getElementById('intentarBtn');
-const nuevoJuegoBtn = document.getElementById('nuevoJuegoBtn');
-const mensaje = document.getElementById('mensaje');
-const intentos = document.getElementById('intentos');
+// CARRITO DE COMPRAS
+const cambio = document.getElementById('carrito');
+const elementos1 = document.getElementById('lista-1');
+const lista = document.querySelector('#lista-carrito tbody');
+const vaciarcarritoBtn = document.getElementById('vaciar-carrito');
+const carritoFlotante = document.getElementById('carrito-flotante'); // El contenedor flotante
 
-let numeroSecreto;
-let contadorIntentos;
+// Cargar los event listeners
+cargarEventlisteners();
 
-function nuevoJuego() {
-    numeroSecreto = Math.floor(Math.random() * 10) + 1;
-    contadorIntentos = 0;
-    mensaje.textContent = '';
-    intentos.textContent = '';
-    numeroInput.value = '';
+function cargarEventlisteners() {
+    // Escuchar el evento de agregar al carrito
+    elementos1.addEventListener('click', comprarElemento);
+    // Escuchar el evento de eliminar un producto del carrito
+    cambio.addEventListener('click', eliminarElemento);
+    // Escuchar el evento de vaciar el carrito
+    vaciarcarritoBtn.addEventListener('click', vaciarCarrito);
 }
 
-function verificarNumero() {
-    const numeroUsuario = parseInt(numeroInput.value);
+function comprarElemento(e) {
+    e.preventDefault();
 
-    if (isNaN(numeroUsuario)) {
-        alert('Por favor, ingresa un número válido.');
-        return;
+    if (e.target.classList.contains('agregar-carrito')) {
+        const elemento = e.target.parentElement.parentElement;
+        leerDatosElemento(elemento);
     }
-
-    contadorIntentos++;
-
-    if (numeroUsuario === numeroSecreto) {
-        mensaje.textContent = `¡Felicidades! Adivinaste el número en ${contadorIntentos} intentos.`;
-    } else if (numeroUsuario < numeroSecreto) {
-        mensaje.textContent = 'El número secreto es mayor.';
-    } else {
-        mensaje.textContent = 'El número secreto es menor.';
-    }
-
-    intentos.textContent = `Intentos: ${contadorIntentos}`;
-    numeroInput.value = '';
 }
 
-nuevoJuego(); // Iniciar un nuevo juego al cargar la página
+function leerDatosElemento(elemento) {
+    // Crear un objeto con la información del producto
+    const infoElemento = {
+        imagen: elemento.querySelector('img').src,
+        titulo: elemento.querySelector('h3').textContent,
+        precio: elemento.querySelector('.precio').textContent,
+        id: elemento.querySelector('a').getAttribute('data-id')
+    };
+    // Insertar el producto en el carrito
+    insertarCarrito(infoElemento);
+}
 
-intentarBtn.addEventListener('click', verificarNumero);
-nuevoJuegoBtn.addEventListener('click', nuevoJuego);
+function insertarCarrito(elemento) {
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+     <td><img src="${elemento.imagen}" width="100" /></td>
+     <td>${elemento.titulo}</td>
+     <td>${elemento.precio}</td>
+     <td><a href="#" class="borrar" data-id="${elemento.id}">x</a></td>
+    `;
+
+    lista.appendChild(row);
+
+    // Mostrar el carrito automáticamente
+    carritoFlotante.style.display = 'block';
+
+    // Desplazar la página hacia el carrito (únicamente una vez)
+    carritoFlotante.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+function eliminarElemento(e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains('borrar')) {
+        e.target.parentElement.parentElement.remove();
+    }
+}
+
+function vaciarCarrito() {
+    while (lista.firstChild) {
+        lista.removeChild(lista.firstChild);
+    }
+    return false;
+}
+
+
+
+
+
+
+
