@@ -1,0 +1,188 @@
+/* styles.css */
+
+/* Variables de color para estilo profesional */
+:root {
+    --color-primario: #1e293b;
+    --color-secundario: #0ea5e9;
+    --color-fondo: #f1f5f9;
+    --color-texto: #1e293b;
+    --color-boton: #0ea5e9;
+    --color-boton-hover: #0284c7;
+    --border-radius: 12px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+    --espaciado: 20px;
+    --font-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.8;
+    padding: var(--espaciado);
+}
+
+/* Estilo de encabezado */
+.header {
+    background-color: var(--color-primario);
+    padding: var(--espaciado);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--espaciado);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+/* Sección de Sobre Mi */
+.section {
+    background-color: white;
+    padding: var(--espaciado);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--espaciado);
+}
+
+.content-toggle {
+    margin-top: var(--espaciado);
+}
+
+.toggle-button {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.content {
+    display: none; /* Sección oculta por defecto */
+    margin-top: var(--espaciado);
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+/* Foto de perfil */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+    background-color: white;
+    padding: var(--espaciado);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--espaciado);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulario de contacto */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: var(--espaciado);
+    border: 2px solid #e2e8f0;
+    border-radius: var(--border-radius);
+    font-family: var(--font-principal);
+    transition: var(--transition);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.3);
+}
+
+.contact-form button {
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.contact-form button:hover {
+    background-color: var(--color-boton-hover);
+    box-shadow: 0 12px 30px rgba(2, 132, 199, 0.3);
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    margin-top: var(--espaciado);
+    padding: 15px;
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
